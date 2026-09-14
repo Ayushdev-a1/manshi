@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
+import { Analytics } from "@vercel/analytics/react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { ArrowUp, ArrowUpRight, Check, ExternalLink, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { Button } from "./components/ui/button";
@@ -287,6 +288,7 @@ function App() {
 
 
       <button type="button" onClick={goHome} aria-label="Back to top" className="fixed bottom-5 right-5 z-40 grid size-11 place-items-center rounded-full bg-forest text-paper shadow-xl transition hover:-translate-y-1"><ArrowUp className="size-4"/></button>
+      <Analytics />
     </div>
   );
 }
